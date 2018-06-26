@@ -2401,9 +2401,9 @@ jQuery(document).ready(function () {
             ct += '<li class="grp" index="'+ind+'">'+e.name+'</li>';
             
             e.child.forEach(function(el,index){
-                cl += '<li class="hide gp-'+ind+'" index="'+index+'" parent_index="'+ind+'">'+el.name+'</li>';
+                cl += '<li class="group gp-'+ind+' hide" index="'+ind+'-'+index+'" parent_index="'+ind+'">'+el.name+'</li>';
                 el.child.forEach(function(ele,i){
-                    at += '<li class="hide gp-'+ind+'" index="'+i+'" parent_index="'+index+'">'+ele.name+'</li>';
+                    at += '<li class="grp-'+ind+'-'+index+' hide" index="'+i+'" parent_index="'+index+'" >'+ele.name+'</li>';
                     
                 })
                
@@ -2424,20 +2424,29 @@ jQuery(document).ready(function () {
         render();
 	
 	render1();
-    let lastIndex;
+    
     $('.grp').on('click', function() {
-      console.log(this.getAttribute('index'));
         let index = this.getAttribute('index');
-        if (index != lastIndex){
-            lastIndex = index
+        if (!$(this).hasClass('selected')){
             $(this).addClass('selected');
-            $(".gp-"+lastIndex).hide();
             $(".gp-"+index).show();
         } else {
             $(this).removeClass('selected');
-            
+            $(".gp-"+index).hide();
         }
     });
+    $('.group').on('click', function() {
+        let p_index = this.getAttribute('index').split('-')[0];
+        let index = this.getAttribute('index').split('-')[1];
+        if (!$(this).hasClass('selected')){
+            $(this).addClass('selected');
+            $(".grp-"+p_index+"-"+index).show()
+        } else {
+            $(this).removeClass('selected');
+            $(".grp-"+p_index+"-"+index).hide();
+        }
+    });
+                
     
         console.log(model);
     var accordionsMenu = $('.cd-accordion-menu');

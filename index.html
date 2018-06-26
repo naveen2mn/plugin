@@ -37,17 +37,38 @@
         }
         .show{
             display: block;
+            transition: width 0.5s ease;
+            
+            
         }
         .hide{
             display: none;
+            transition: 0.3s ease-out;
+                        transition: visibility 0s, opacity 0.5s linear;
+        }
+        .grp{
+                cursor: pointer;
+        }
+        .group{
+                cursor: pointer;
         }
         li.grp.selected {
-            background-color: #e7e9ea !important;
+            background-color: #005496d4 !important;
+    color: #ffffff !important;
+    border-right: 4px solid #7fe608;
+    border-radius: 0 0 8px 0;
+    transition: 0.3s ease;
+        }
+        li.group.selected {
+                background-color: #e7e9ea !important;
             color: #005496 !important;
             border-right: 4px solid #005496;
             box-shadow: inset 0 0 8px 2px #ccc;
             border-radius: 0 0 8px 0;
             transition: 0.3s ease;
+        }
+        {
+                
         }
     </style>
 </head>
