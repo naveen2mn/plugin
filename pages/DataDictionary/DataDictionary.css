@@ -1,0 +1,110 @@
+
+
+.page {
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: auto;
+   
+    width: 100%;
+}
+
+
+
+.data-card{
+    background-color: lightgrey;
+    padding: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    min-height: 40px;
+    overflow: hidden;
+}
+.card-heading{
+    margin-bottom: 0;
+    line-height: 30px;
+    width: 80%;
+    float: left;
+    font-weight: bold;
+   
+}
+
+
+
+.selected{
+    background-color: #005496d4 !important;
+    color: #ffffff !important;
+    border-right: 4px solid #7fe608;
+    border-radius: 0 0 8px 0;
+    transition: 0.3s ease;
+}
+.title{
+    color: white;
+    background: #005496d4;
+    padding: 4px 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.wrapper{
+    
+    border: 3px solid #ababab;
+    box-shadow: 0 0 7px 0 #eee;
+    height: 100%;
+}   
+.inner-wrapper{
+    padding: 5px;
+}
+.pd-5{
+    padding: 0 5px;
+}
+.mg-bt-5{
+    margin-bottom: 5px;
+
+}
+.item-list{
+    background-color: #ddd;
+    padding: 2px 4px;
+    margin-bottom: 5px;
+}
+.edit-icon{
+    
+    cursor: pointer;
+    float: right;
+padding: 1px 8px ;
+	margin:2px;	
+}
+.add-icon{
+cursor: pointer;
+	
+    float: right;
+padding: 1px 8px ;
+	margin:2px;
+}
+
+
+/*.edit-icon{
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    float: right;
+    background-image: url(../../img/edit.png);
+    background-size: cover;
+  
+}
+.add-icon{
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    float: right;
+    background-image: url(../../img/add.png);
+    background-size: cover;
+    
+}
+  */
+.item-list:hover{
+    background-color: #005496d4;
+    color: white;
+}
+#attribute .item-list{
+	cursor: pointer;
+}

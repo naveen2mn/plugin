@@ -1,0 +1,18 @@
+{
+    "env":"dev",
+    "version":"0.1",
+    "path":{
+        "pages":"./pages/",
+        "modals":"./modals/",
+        "headers":"./headers/",
+        "footers":"./footers/"
+    },
+    "home-page":"DataDictionary",
+    "container":{
+        "page":"page_view",
+        "modal":"modal_view",
+        "header":"header_view",
+        "footer":"footer_view"
+    },
+    "mock-api":"mock-api.js"
+}

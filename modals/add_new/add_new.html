@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="modals/add_new/add_new.css" />
+<div class="popup">
+
+    <div class="popup-header">
+        <div class="popup-header-title">Add New</div>
+        <div class="popup-close-btn" id="close_btn"></div>
+    </div>
+    <div class="add-new-wrapper" id="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label class="col-md-2">TargetId</label>
+                    <div class="col-md-10">
+                        <select class="form-control">
+                            <option value="1">IDMP</option>
+                            <option value="2">xEVMPD</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2">Description</label>
+                    <div class="col-md-10">
+                        <input class="form-control" id="Description" name="Description" type="text" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2">Category</label>
+                    <div class="col-md-10">
+                        <select class="form-control" id="Category" name="Class"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2">Class Name</label>
+                    <div class="col-md-10">
+                        <select class="form-control" id="ClassName" name="ClassName"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2">Attribute</label>
+                    <div class="col-md-10">
+                        <select class="form-control" id="Attribute" name="Class"></select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2">Table Name</label>
+                    <div class="col-md-10">
+                        <input class="form-control" id="TableName" name="TableName" type="text" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2">Column Name</label>
+                    <div class="col-md-10">
+                        <input class="form-control" id="ColumnName" name="ColumnName" type="text" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2">Type</label>
+                    <div class="col-md-10">
+                        <input class="form-control" id="Type" name="Type" type="text" value="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2" for="IsActive">Active</label>
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            <input class="check-box" id="IsActive" name="IsActive" type="checkbox" value="true">
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-footer">
+        <button class="cancel-btn" id="cancel_btn">Cancel</button>
+        <button class="create-btn disabled" id="submit"></button>
+    </div>
+
+</div>

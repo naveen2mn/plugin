@@ -1,0 +1,173 @@
+.header-border {
+    height: 10px;
+    background: brown;
+}
+.header{
+    background-color:#337ab7;
+    height: 50px;
+    border-bottom: 1px solid #ffffff;
+    box-shadow: 0 0 10px 0 #ffffff;
+    color: white;
+}
+
+.selected{
+    background-color: #305676;
+}
+
+.menu {
+    height: 48px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 0;
+    line-height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+}
+
+.username-info{
+    position: absolute;
+    right: 10px;
+    top: 12px;
+}
+
+.nav-container{
+    display: flex;
+    float: left;
+}
+
+.nav > li > a{
+    padding: 13px 10px;
+}
+
+.login-wrapper{
+    display: flex;
+}
+
+.menu-btn{
+    background-image: url(../../img/icons8-menu-filled-50.png);
+    width: 55px;
+    height: 48px;
+    background-position: center;
+    background-size: 24px 20px;
+    background-repeat: no-repeat;
+    /* float: right; */
+    display: none;
+    position: absolute;
+    right: 0;
+}
+
+.logoff-btn{
+    background-image: url(../../img/icons8-shutdown-48.png);
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    background-size: cover;
+}
+
+
+.login-name{
+    margin-right: 10px;
+    margin-top: 16px;
+}
+.menu-btn:hover{
+    background-color: #eee;
+}
+
+.menu-hover{
+    background-color: #eee;
+}
+
+.menu-side-bar{
+
+    background-color: white;
+    z-index: 1;
+    box-shadow: 0 0 10px 0 #ccc;
+    display: none;
+    
+}
+.menu-side-bar-wrapper{
+    position: absolute;
+    right: 0;
+    top: 53px;
+    bottom: 0;
+    width: 0px;
+    background-color: white;
+    z-index: 1;
+    box-shadow: 0 0 10px 0 #ccc;
+    display: none;
+}
+.collapse-menu{
+   
+    animation-name: fade-out-ani;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+.expand-menu{
+    animation-name: fade-in-ani;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes fade-out-ani {
+    from {width: 0px;}
+    to {width: 300px;}
+}
+@keyframes fade-in-ani {
+    from {width: 300px;}
+    to {width: 0px;}
+}
+
+.menu-side-heading{
+    padding: 5px;
+    font-size: 18px;
+    color: white;
+    background-color: #337ab7;
+    border-bottom: 1px solid #286192;
+}
+
+.menu-side-heading:hover{
+    background-color: #2e6da5;
+}
+
+.side-menu-list li{
+    margin-left: -40px;
+}
+
+.side-menu-list li a{
+    text-decoration: none;
+    line-height: 40px;
+    padding-left: 15px;
+    display: block;
+    border-bottom: #ececec 1px solid;
+}
+
+
+
+.side-menu-list li:hover{
+    background-color: #eee;
+}
+
+.side-login-container {
+    padding-left: 10px;
+}
+
+
+.side-login-container a{
+    color: #337ab7;
+    line-height: 5px;
+}
+
+.side-login-container li{
+    width: 100%;
+    border-bottom: #ececec 1px solid;
+}
+
+.glyphicon {
+    top: 2px;
+    font-size: 12px;
+    margin-left: 8px;
+}
