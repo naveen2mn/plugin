@@ -4,8 +4,6 @@
 (function () {
     let datadictionary = new PDC.page();
     let modal = [];
-
-
     var selected_ele;
     var selected_att;
     var selectedCategory = 0;
@@ -18,20 +16,39 @@
         $(document).on('class_view', renderClassHandler);
         $(document).on('attribute_view', renderAttributeHandler);
         $('#add_new').on('click', addnew);
-        
-
-
+        $('#edit').on('click', onEdit);
     }
 
     datadictionary.onExit = function () {
         $(document).off('class_view', renderAttributeHandler);
         $(document).off('attribute_view', renderAttributeHandler);
         $('#add_new').off('click', addnew);
-        $('.item-list').off('click', item);
+        $('#edit').off('click', onEdit);
     }
     function main() {
         renderdatadictionary();
+    }
+    function onEdit(e) {
+        let data = {
+            'data': modal,
+            'submit': 'Save',
+            'cancel': 'Cancel',
+            'model':modal,
+            'index':e.target.getAttribute('index'),
+            'callback': onEditClose
+        };
+		console.log(data)
+        PDC.openModal('edit', data, function () {
+            console.log('come')
+            main();
+        });
 
+    }
+    function onEditClose(data) {
+        console.log(data)
+        modal[data.index] = data;
+        console.log(modal)
+        main();
 
     }
     function addnew(e) {
